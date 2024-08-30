@@ -11,6 +11,7 @@
 		8B761B9A2C824F900011A356 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B761B992C824F900011A356 /* ContentView.swift */; };
 		8B761B9C2C824F920011A356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B761B9B2C824F920011A356 /* Assets.xcassets */; };
 		8B761BA02C824F920011A356 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B761B9F2C824F920011A356 /* Preview Assets.xcassets */; };
+		8B761BA82C8254760011A356 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 8B761BA72C8254760011A356 /* GoogleGenerativeAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B761BA82C8254760011A356 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = begruender;
+			packageProductDependencies = (
+				8B761BA72C8254760011A356 /* GoogleGenerativeAI */,
+			);
 			productName = begruender;
 			productReference = 8B761B942C824F900011A356 /* begruender.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 8B761B8B2C824F900011A356;
+			packageReferences = (
+				8B761BA62C8254760011A356 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = 8B761B952C824F900011A356 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -359,6 +367,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B761BA62C8254760011A356 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google-gemini/generative-ai-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B761BA72C8254760011A356 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B761BA62C8254760011A356 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B761B8C2C824F900011A356 /* Project object */;
 }
